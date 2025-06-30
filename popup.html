@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>i18n Helper</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    </head>
+    <body id="ihe-popup">
+        <div class="ihe-container">
+            <h1>i18n Helper</h1>
+
+            <div class="ihe-control-panel">
+                <div class="ihe-language-select">
+                    <label>
+                        <input type="checkbox" name="lang" value="ko" checked />
+                        한국어
+                    </label>
+                    <label>
+                        <input type="checkbox" name="lang" value="en" />
+                        영어
+                    </label>
+                    <label>
+                        <input type="checkbox" name="lang" value="ja" />
+                        일본어
+                    </label>
+                </div>
+
+                <div class="ihe-extract-control">
+                    <button id="extractPage" class="ihe-btn ihe-primary">
+                        <i class="fas fa-file-alt"></i>
+                        <span>페이지 텍스트 추출</span>
+                        <i class="fas fa-spinner fa-spin ihe-loading-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="ihe-translation-panel">
+                <div class="ihe-translation-content">
+                    <div class="ihe-translation-list" id="translationList">
+                        <!-- 번역 항목들이 여기에 동적으로 추가됩니다 -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="ihe-action-panel">
+                <button id="exportJson" class="ihe-btn ihe-secondary">
+                    <i class="fas fa-download"></i>
+                    <span>JSON 내보내기</span>
+                </button>
+                <button id="clearData" class="ihe-btn ihe-danger">
+                    <i class="fas fa-trash"></i>
+                    <span>데이터 초기화</span>
+                </button>
+            </div>
+
+            <div class="ihe-status-bar">
+                <span id="ihe-statusMessage"></span>
+                <div class="ihe-progress-bar">
+                    <div class="ihe-progress-fill"></div>
+                </div>
+            </div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
